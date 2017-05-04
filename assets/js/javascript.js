@@ -18,7 +18,6 @@ this.atacar = function(pokemon){
 }
 }
 
-
 function pelear(){
 	var uno = document.getElementById("choose").value;
 	var dos = document.getElementById("elige").value;
@@ -33,10 +32,10 @@ function pelear(){
 	}
 var ataq = prompt("Ingresa poder de ataque primer Pokemon");
 var ataq2 = prompt("Ingresa poder de ataque segundo Pokemon");
-
+var life = segundo.vida - ataq
 var ataque = primero.atacar(dos)
 var final = document.getElementById("final")
-final.innerHTML = "<b>"+uno+"</b>"+ " atacó a "+"<b>"+dos+"</b> y <i>"+dos+"</i> tiene una vida de: "+ segundo.vida+" restante."
+final.innerHTML = "<b>"+uno+"</b>"+ " atacó a "+"<b>"+dos+"</b> y <i>"+dos+"</i> tiene una vida de: "+life+" restante."
  
 }
 
