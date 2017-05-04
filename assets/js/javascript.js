@@ -18,11 +18,25 @@ this.atacar = function(pokemon){
 }
 }
 
-const Pikachu = new Pokemon("Pikachu","amarillo",100)
-const Charmander = new Pokemon("Charmander","rojo",20)
-const Psyduck = new Pokemon("Psyduck", "amarillo patito",300)
-Pikachu.atacar(Charmander)
 
-console.log(Charmander.vida)
-console.log(Pikachu.mostrarPokemon())
-console.log(Pikachu.aumentarAmistad(29))
+function pelear(){
+	var uno = document.getElementById("choose").value;
+	var dos = document.getElementById("elige").value;
+
+	var primero = new Pokemon (uno,"amarillo",100)
+	var segundo = new Pokemon (dos,"rojo",20)
+
+
+	if(uno == dos){
+		alert("Elegiste el mismo Pokemon!")
+		return;
+	}
+var ataq = prompt("Ingresa poder de ataque primer Pokemon");
+var ataq2 = prompt("Ingresa poder de ataque segundo Pokemon");
+
+var ataque = primero.atacar(dos)
+var final = document.getElementById("final")
+final.innerHTML = "<b>"+uno+"</b>"+ " atacó a "+"<b>"+dos+"</b> y <i>"+dos+"</i> tiene una vida de: "+ segundo.vida+" restante."
+ 
+}
+
